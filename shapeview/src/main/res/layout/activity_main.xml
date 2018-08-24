@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="MissingConstraints">
+
+    <com.gxj1228.shapeview.view.ShapeView
+        android:id="@+id/tv_1"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="文本样式+填充颜色+圆角"
+        android:textColor="#fff"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sv_cornerPosition="bottomLeft|bottomRight"
+        app:sv_cornerRadius="10dp"
+        app:sv_fillColor="#00bc71" />
+
+    <com.gxj1228.shapeview.view.ShapeView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="文本样式+填充颜色+圆角"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1"
+        app:sv_activeEnabled="true"
+        app:sv_cornerRadius="5dp"
+        app:sv_fillColor="#00bc71" />
+
+    <com.gxj1228.shapeview.view.ShapeView
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="文本样式+填充颜色+圆角"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@+id/tv_2"
+        app:sv_activeEnabled="true"
+        app:sv_fillColor="#00bc71"
+        app:sv_shapeMode="oval" />
+
+    <com.gxj1228.shapeview.view.ShapeView
+        android:id="@+id/tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="文本样式+填充颜色+圆角"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@+id/tv_3"
+        app:sv_activeEnabled="true"
+        app:sv_cornerRadius="10dp"
+        app:sv_endColor="#00bc71"
+        app:sv_orientation="TOP_BOTTOM"
+        app:sv_startColor="#88ff0000" />
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/ic_changebtn_change"
+        android:text="默认按钮图标无法居中"
+        android:textColor="#808080"
+        android:textSize="11dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_4" />
+
+    <com.gxj1228.shapeview.view.ShapeView
+        android:id="@+id/tv_5"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/ic_changebtn_change"
+        android:text="带图标样式居中"
+        android:textColor="#808080"
+        android:textSize="11dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_1"
+        app:sv_cornerRadius="50dp"
+        app:sv_drawablePosition="left"
+        app:sv_strokeColor="#e6e6e6"
+        app:sv_strokeWidth="0.5dp" />
+
+    <com.gxj1228.shapeview.view.ShapeConstraintLayout
+        android:id="@+id/scl_1"
+        android:layout_width="250dp"
+        android:layout_height="36dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_5"
+        app:svg_cornerRadius="20dp"
+        app:svg_fillColor="#4dff1100"
+        app:svg_withElevation="true">
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="please input"
+            android:textColor="#80ffffff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="sure"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.gxj1228.shapeview.view.ShapeConstraintLayout>
+
+    <com.gxj1228.shapeview.view.ShapeConstraintLayout
+        android:layout_width="250dp"
+        android:layout_height="36dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/scl_1"
+        app:svg_cornerPosition="topRight|bottomRight"
+        app:svg_cornerRadius="20dp"
+        app:svg_fillColor="#4d000000">
+
+        <ImageView
+            android:id="@+id/iv4"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="please input"
+            android:textColor="#80ffffff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="sure"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.gxj1228.shapeview.view.ShapeConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
